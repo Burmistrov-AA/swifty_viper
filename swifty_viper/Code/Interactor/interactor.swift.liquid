@@ -1,0 +1,51 @@
+// ----------------------------------------------------------------------------
+//
+//  {{ prefix }}{{ module_info.file_name }}
+//
+//  @author     {{ developer.name }}
+//  @copyright  Copyright (c) {{ year }}, Roxie Mobile Ltd. All rights reserved.
+//  @link       http://www.roxiemobile.com/
+//
+// ----------------------------------------------------------------------------
+
+public protocol {{ module_info.name }}InteractorOutput: class {
+    // ...
+}
+
+// ----------------------------------------------------------------------------
+
+public final class {{ module_info.name }}Interactor {
+
+// MARK: - Construction
+
+    public init(
+        output: {{ module_info.name }}InteractorOutput,
+        dataStorage: {{ module_info.name }}DataStorage
+    ) {
+        self.output = output
+        self.dataStorage = dataStorage
+    }
+
+// MARK: - Properties
+
+    private(set) weak var output: {{ module_info.name }}InteractorOutput!
+    private(set) var dataStorage: {{ module_info.name }}DataStorage
+
+// MARK: - Methods
+
+    // ...
+
+// MARK: - Private Methods
+
+    // ...
+
+// MARK: - Constants
+
+    private struct Inner {
+        // ...
+    }
+
+// MARK: - Variables
+
+    // ...
+}

@@ -1,0 +1,78 @@
+// ----------------------------------------------------------------------------
+//
+//  {{ prefix }}{{ module_info.file_name }}
+//
+//  @author     {{ developer.name }}
+//  @copyright  Copyright (c) {{ year }}, Roxie Mobile Ltd. All rights reserved.
+//  @link       http://www.roxiemobile.com/
+//
+// ----------------------------------------------------------------------------
+
+public protocol {{ module_info.name }}ModuleInput: class {
+    // ...
+}
+
+// ----------------------------------------------------------------------------
+
+public final class {{ module_info.name }}Presenter {
+
+// MARK: - Construction
+
+    public init(view: {{ module_info.name }}ViewController, router: {{ module_info.name }}Router) {
+        self.view = view
+        self.router = router
+    }
+
+// MARK: - Properties
+
+    public weak var view: {{ module_info.name }}ViewController!
+    public var interactor: {{ module_info.name }}Interactor!
+    public var router: {{ module_info.name }}Router!
+
+// MARK: - Methods
+
+    // ...
+
+// MARK: - Private Methods
+
+    // ...
+
+// MARK: - Constants
+
+    private struct Inner {
+        // ...
+    }
+
+// MARK: - Variables
+
+    // ...
+}
+
+// MARK: - {{ module_info.name }}ViewOutput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
+
+// MARK: - Methods
+
+    public func viewIsReady() {
+        // ...
+    }
+}
+
+// MARK: - {{ module_info.name }}InteractorOutput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorOutput {
+
+// MARK: - Methods
+
+    // ...
+}
+
+// MARK: - {{ module_info.name }}ModuleInput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {
+
+// MARK: - Methods
+
+    // ...
+}

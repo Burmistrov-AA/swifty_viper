@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+//
+//  {{ prefix }}{{ module_info.file_name }}
+//
+//  @author     {{ developer.name }}
+//  @copyright  Copyright (c) {{ year }}, Roxie Mobile Ltd. All rights reserved.
+//  @link       http://www.roxiemobile.com/
+//
+// ----------------------------------------------------------------------------
+
+import UIKit
+
+public protocol {{ module_info.name }}ViewOutput {
+
+// MARK: - Methods
+
+    func viewIsReady()
+}
+
+// ----------------------------------------------------------------------------
+
+public final class {{ module_info.name }}ViewController: UIViewController {
+
+// MARK: - Properties
+
+    public var output: {{ module_info.name }}ViewOutput!
+
+// MARK: - Methods
+
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+
+        output.viewIsReady()
+    }
+
+// MARK: - Private Methods
+
+    // ...
+
+// MARK: - Constants
+
+    private struct Inner {
+        // ...
+    }
+
+// MARK: - Variables
+
+    // ...
+}

@@ -1,0 +1,29 @@
+# Template information section
+name: "swifty_viper"
+summary: "Swift VIPER module template with Wireframe"
+author: "Artem Burmistrov <burmistrov-aa@roxiemobile.com>"
+version: "0.1.1"
+license: "MIT"
+
+# The declarations for swifty_viper/Code files
+
+code_files:
+# Configurator
+- {name: Configurator/Configurator.swift, path: swifty_viper/Code/Configurator/configurator.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/DataStorage.swift, path: swifty_viper/Code/Interactor/data_storage.swift.liquid}
+- {name: Interactor/Interactor.swift, path: swifty_viper/Code/Interactor/interactor.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Presenter.swift, path: swifty_viper/Code/Presenter/presenter.swift.liquid}
+
+# Router layer
+- {name: Router/Router.swift, path: swifty_viper/Code/Router/router.swift.liquid}
+
+# View layer
+- {name: View/ViewController.storyboard, path: swifty_viper/Code/View/viewcontroller.storyboard.liquid}
+- {name: View/ViewController.swift, path: swifty_viper/Code/View/viewcontroller.swift.liquid}
+
+# Wireframe layer
+- {name: Wireframe/Wireframe.swift, path: swifty_viper/Code/Wireframe/wireframe.swift.liquid}
