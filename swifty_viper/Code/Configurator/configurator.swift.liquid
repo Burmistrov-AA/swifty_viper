@@ -1,0 +1,39 @@
+// ----------------------------------------------------------------------------
+//
+//  {{ prefix }}{{ module_info.file_name }}
+//
+//  @author     {{ developer.name }}
+//  @copyright  Copyright (c) {{ year }}, Roxie Mobile Ltd. All rights reserved.
+//  @link       http://www.roxiemobile.com/
+//
+// ----------------------------------------------------------------------------
+
+import UIKit
+
+public final class {{ module_info.name }}ModuleConfigurator {
+
+// MARK: - Construction
+
+    public init() {
+        // ...
+    }
+
+// MARK: - Methods
+
+    public func configure(
+        viewController: {{ module_info.name }}ViewController,
+        dataStorage: {{ module_info.name }}DataStorage
+    ) {
+        let router = {{ module_info.name }}Router(viewController: viewController)
+
+        let presenter = {{ module_info.name }}Presenter(view: viewController, router: router)
+
+        let interactor = {{ module_info.name }}Interactor(
+            output: presenter,
+            dataStorage: dataStorage
+        )
+
+        presenter.interactor = interactor
+        viewController.output = presenter
+    }
+}

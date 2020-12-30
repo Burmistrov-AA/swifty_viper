@@ -1,0 +1,44 @@
+// ----------------------------------------------------------------------------
+//
+//  {{ prefix }}{{ module_info.file_name }}
+//
+//  @author     {{ developer.name }}
+//  @copyright  Copyright (c) {{ year }}, Roxie Mobile Ltd. All rights reserved.
+//  @link       http://www.roxiemobile.com/
+//
+// ----------------------------------------------------------------------------
+
+import ModernDesignExtensions
+import UIKit
+
+public final class {{ module_info.name }}Wireframe {
+
+// MARK: - Construction
+
+    public init() {
+        // ...
+    }
+
+// MARK: - Methods
+
+    public func init{{ module_info.name }}ViewController(dataStorage: {{ module_info.name }}DataStorage = {{ module_info.name }}DataStorage()) -> {{ module_info.name }}ViewController {
+
+        if self.viewController == nil {
+            self.viewController = {{ module_info.name }}ViewController.mdc_controller(storyboardName: Inner.storyboardName)!
+            configurator.configure(viewController: self.viewController!, dataStorage: dataStorage)
+        }
+
+        return self.viewController!
+    }
+
+// MARK: - Constants
+
+    private struct Inner {
+        static let storyboardName = "{{ module_info.name }}ViewController"
+    }
+
+// MARK: - Variables
+
+    private weak var viewController: {{ module_info.name }}ViewController?
+    private let configurator = {{ module_info.name }}ModuleConfigurator()
+}
